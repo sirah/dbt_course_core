@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: DBT_BTC
     env:
-      BRANCH_NAME: ${{ github.head_ref || github.ref_name }}  # PR vs push
+      BRANCH_NAME: ${{ github.ref_name || github.head_ref  }}  # PR vs push
 
     steps:
       - name: Checkout repo
